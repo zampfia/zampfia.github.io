@@ -6,7 +6,7 @@ from github import Github
 g = Github(os.environ['GITHUB_TOKEN'])
 
 # Get the repository
-repo = g.get_repo('<owner>/<repository>')
+repo = g.get_repo('zampfia/zampfia.github.io')
 
 # Get all open issues and pull requests
 open_issues = repo.get_issues(state='open')
