@@ -1,3 +1,23 @@
 <h1>Ich bin ein gud purson</h1>
 <h2>Such Good person</h2>
 <h3>Du habe ich bin gud</h3>
+<button type="button" onclick="myFunction()">NON FA ASSOLUTAMENTE NIENTE</button> 
+<script>
+function myFunction() {
+    var folderPath = "photos/"; // Specify the relative path to the folder
+    var images = [
+        "zampa1.png",
+        "zampa2.png",
+        "zampa3.png"
+        // Add more image filenames here
+    ];
+
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var randomImage = folderPath + images[randomIndex];
+    
+    var catImage = document.getElementById("cat");
+    catImage.src = randomImage;
+    catImage.style.visibility = "visible";
+}
+</script>
+<img src="" id="cat" style="visibility:hidden" />
