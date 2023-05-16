@@ -1,6 +1,7 @@
 <h1>Ich bin ein gud purson</h1>
 <h2>Such Good person</h2>
 <h3>Du habe ich bin gud</h3>
+<h4>"NON FA ASSOLUTAMENTE NIENTE" E' UN BOTTONE</h4>
 <button type="button" onclick="myFunction()">NON FA ASSOLUTAMENTE NIENTE</button> 
 <script>
 function myFunction() {
@@ -14,10 +15,19 @@ function myFunction() {
 
     var randomIndex = Math.floor(Math.random() * images.length);
     var randomImage = folderPath + images[randomIndex];
-    
+
+    if(clicks==29){
+        alert("HAI VINTO UN ZAMPA");
+        clicks=0;
+    }
+
     var catImage = document.getElementById("cat");
     catImage.src = randomImage;
     catImage.style.visibility = "visible";
+
+    clicks += 1;
 }
+var clicks = 0;
 </script>
 <img src="" id="cat" style="visibility:hidden" />
+<h1>CLICCA 30 VOLTE PER PREMIO</h1>
