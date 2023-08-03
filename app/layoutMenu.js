@@ -17,7 +17,7 @@ const Layout = () => {
 
     return (
         <div>
-            <button onClick={handleMenuClick} id={"toggle-button"} src="../../public/photos/transparent.gif"></button>
+            <button onClick={handleMenuClick} id={"toggle-button"}></button>
             <SideMenu isOpen={isMenuOpen} onClose={handleCloseMenu} />
         </div>
     );

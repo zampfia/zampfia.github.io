@@ -5,7 +5,7 @@ import Link from 'next/link';
 const SideMenu = ({ isOpen, onClose }) => {
     return (
         <div className={`side-menu ${isOpen ? 'open' : ''}`}>
-            <button className={"close-button"} src="../../public/photos/transparent.gif" onClick={onClose}></button>
+            <button className={"close-button"} onClick={onClose}></button>
             <ul>
                 <li>
                     <Link href="/">Home Page</Link>
