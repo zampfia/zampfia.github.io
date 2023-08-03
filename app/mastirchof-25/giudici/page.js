@@ -20,28 +20,28 @@ export default function Giudici() {
                 </div>
             </div>
             <div className='flexdiv right'>
-                <Image id="image" className='rightimage' src="../../../photos/gigi.png" width={500} height={300} alt="Giudice Zampa"/>
+                <Image id="image" className="rightimage" src="../../../photos/gigi.png" width={500} height={300} alt="Giudice Gigi"/>
                 <div className='childdiv'>
                     <h4 id="header">Il Giudice <i>Gigi</i></h4>
                     <text id='text'>Fratello del Giudice Zampa. Rinomato nel mondo per la grande intelligenza culinaria</text>
                 </div>
             </div>
             <div className='flexdiv normal'>
-                <Image id="image" src="../../../photos/fratelli bufala.png" width={500} height={300} alt="Giudice Zampa"/>
+                <Image id="image" src="../../../photos/fratelli bufala.png" width={500} height={300} alt="Giudici Fratelli Bufala"/>
                 <div className='childdiv'>
                     <h4 id="header">I Giudici <i>Fratelli Bufala</i></h4>
                     <text id='text'>La coppia di cuochi migliore di Italia. Hanno cucinato per tutti i grandi del mondo (come Zampa, il Monte Everest e la Statua dell'Unita in India)</text>
                 </div>
             </div>
             <div className='flexdiv right'>
-                <Image id="image" className='rightimage' src="../../../photos/franco.png" width={500} height={300} alt="Giudice Zampa"/>
+                <Image id="image" className="rightimage" src="../../../photos/franco.png" width={500} height={300} alt="Giudice Franco"/>
                 <div className='childdiv'>
                     <h4 id="header">Il Giudice <i>Franco</i></h4>
                     <text id='text'><i>Franco</i></text>
                 </div>
             </div>
             <div className='flexdiv normal'>
-                <Image id="image" src="../../../photos/giuseppe.png" width={500} height={300} alt="Giudice Zampa"/>
+                <Image id="image" src="../../../photos/giuseppe.png" width={500} height={300} alt="Giudice Una Persona A Caso Trovata Per Strada (nome vero Giuseppe De Giuseppi)"/>
                 <div className='childdiv'>
                     <h4 id="header">Il Giudice <i>Una Persona A Caso Trovata Per Strada</i> (nome vero <i>Giuseppe De Giuseppi</i>) </h4>
                     <text id='text'>Una Persona A Caso Trovata Per Strada (nome vero Giuseppe De Giuseppi) è un famoso critico di cucina. Il suo nome (Una Persona A Caso Trovata Per Strada (nome vero Giuseppe De Giuseppi)) è riconosciuto in tutta la galassia</text>
