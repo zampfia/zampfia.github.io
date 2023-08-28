@@ -1,4 +1,4 @@
-import styles from '../styles/about.module.css';
+import '../styles/about.css';
 import Layout from '../layoutMenu';
 
 export const metadata = {
@@ -10,8 +10,8 @@ export default function About() {
         <div>
             <Layout>
             </Layout>
-            <h1 className={styles.title}>NOI ABBIAMO TANTI SOLDI</h1>
-            <text className={styles.label}>Zampa is <i><b>RE MONDUS</b></i></text>
+            <h1 className="title">NOI ABBIAMO TANTI SOLDI</h1>
+            <text className="label">Zampa is <i><b>RE MONDUS</b></i></text>
         </div>
     )
 }

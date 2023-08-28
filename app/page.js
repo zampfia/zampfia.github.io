@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import styles from './styles/page.module.css';
+import "./styles/page.css";
 import ScrollingImages from './scrollingImages';
 import Layout from './layoutMenu';
 
@@ -19,7 +19,7 @@ const HomePage = () => (
   <div>
     <Layout>
     </Layout>
-    <h1 className={styles.title}>ZAMPA E' IL PIU' GRANDE</h1>
+    <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
     <ImageContainer />
     <ScrollingImages />
   </div>

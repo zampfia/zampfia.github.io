@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import styles from './styles/page.module.css';
+import './styles/page.css';
 
 const getRandomImage = () => {
   const images = [
@@ -34,8 +34,8 @@ const getRandomImage = () => {
   return (
     <div>
       <button onClick={handleClick}>Cliccami</button>
-      <p className={styles.label}>Hai cliccato {clickCount} volte!</p>
-      <p className={styles.label}>Ti mancano {30 - clickCount} click per il premio!</p>
+      <p className="label">Hai cliccato {clickCount} volte!</p>
+      <p className="label">Ti mancano {30 - clickCount} click per il premio!</p>
       {randomImage && <img src={randomImage} alt="Random Image" />}
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react';
-import styles from './styles/scrollingImages.module.css';
+import styles from './styles/scrollingImages.css';
 
 const ScrollingImages = () => {
   const containerRef = useRef(null);
@@ -22,8 +22,8 @@ const ScrollingImages = () => {
   }, []);
 
   return (
-    <div className={styles.container} ref={containerRef}>
-      <div className={styles.images}>
+    <div className="container" ref={containerRef}>
+      <div className="images">
         <img src="/photos/zampa4.jpg" alt="Zampa 4" />
         <img src="/photos/zampa5.jpg" alt="Zampa 5" />
         <img src="/photos/zampa6.jpg" alt="Zampa 6" />
