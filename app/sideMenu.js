@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/sideMenu.css';
+import 'app/styles/sideMenu.css';
 import Link from 'next/link';
 
 const SideMenu = ({ isOpen, onClose }) => {

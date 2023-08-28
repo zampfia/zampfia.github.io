@@ -1,5 +1,5 @@
-import "../styles/zampacy.css"
-import Layout from "../layoutMenu.js"
+import "app/styles/zampacy.css"
+import Layout from "app/layoutMenu.js"
 
 export default function Zampacy() {
     return(

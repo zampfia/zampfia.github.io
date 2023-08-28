@@ -1,4 +1,4 @@
-import '../styles/about.css';
+import 'app/styles/about.css';
 import Layout from '../layoutMenu';
 
 export const metadata = {

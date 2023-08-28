@@ -1,15 +1,11 @@
 import dynamic from 'next/dynamic';
-import "./styles/page.css";
+import "app/styles/page.css";
 import ScrollingImages from './scrollingImages';
 import Layout from './layoutMenu';
 
 const ImageContainer = dynamic(() => import('./imgContainer'), {
   ssr: false,
 });
-
-// const ScrollingImages = dynamic(() => import('./scrollingImages'), {
-//   ssr: false,
-// });
 
 export const metadata = {
   title: "Zampa è bravo",

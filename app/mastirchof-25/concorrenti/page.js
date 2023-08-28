@@ -1,5 +1,5 @@
 import Layout from '../../layoutMenu';
-import "../../styles/concorrenti.css"
+import "app/styles/concorrenti.css"
 
 export const metadata = {
     title: "I Concorrenti di Mastirchof 25",
