@@ -8,10 +8,10 @@ const SideMenu = ({ isOpen, onClose }) => {
             <button className={"close-button"} onClick={onClose}></button>
             <ul>
                 <li>
-                    <Link href="/">Home Page</Link>
+                    <Link className="link" href="/">Home Page<br /></Link>
                 </li>
                 <li>
-                    <Link href="/about">Chi siamo</Link>
+                    <Link className="link" href="/about">Chi siamo</Link>
                 </li>
             </ul>
         </div>
