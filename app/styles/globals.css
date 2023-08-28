@@ -3,7 +3,8 @@
     src: url('/fonts/Oswald/static/Owswald-Regular.ttf') format('truetype');
     /* Add more font formats if necessary */
   }
-  
-  body {
-    font-family: 'Oswald', sans-serif;
-  }
+
+body {
+  font-family: 'Oswald', sans-serif;
+  margin-left: 20px;
+}
