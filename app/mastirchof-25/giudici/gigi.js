@@ -10,7 +10,7 @@ const Gigi = () => {
         <text id='text'>Fratello del Giudice Zampa. Rinomato nel mondo per la grande intelligenza culinaria</text>
       </div>
     </div>
- ) 
+  ) 
 }
 
 export default Gigi;
