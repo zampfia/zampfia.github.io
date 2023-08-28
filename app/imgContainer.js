@@ -33,7 +33,7 @@ const getRandomImage = () => {
 
   return (
     <div>
-      <button onClick={handleClick}>Cliccami</button>
+      <button className="button" onClick={handleClick}>Cliccami</button>
       <p className="label">Hai cliccato {clickCount} volte!</p>
       <p className="label">Ti mancano {30 - clickCount} click per il premio!</p>
       {randomImage && <img src={randomImage} alt="Random Image" />}
