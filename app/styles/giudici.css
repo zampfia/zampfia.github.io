@@ -24,14 +24,20 @@
     padding-bottom: 25px;
 }
 
-.childdiv {
+.leftchilddiv {
     grid-area: 1 / 2 / span 1 / span 1;
     padding-left: 30px;
     padding-bottom: 30px;
 }
 
+.rightchilddiv {
+    grid-area: 1 / 2 / span 1 / span 1;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+
 .rightimage {
-    grid-area: 1 / 3 / span 1 /span 1;
+    grid-area: 1 / 3 / span 1 / span 1;
 }
 
 #title {
@@ -49,7 +55,7 @@
 #text {
     font-family: Oswald, sans-serif;
     font-size: 20px;
-}
+    right: 20px;
 }
 
 @media (max-width: 500px){
@@ -64,11 +70,11 @@
     .right {
         width: 100%;
     }
-    .childdiv {
+    .rightchilddiv .leftchilddiv {
         flex:100%;
         padding-left: 30px;
         padding-bottom: 30px;
-   }
+    }
     #image {
         padding-left: 20px;
         max-width: 150px;
