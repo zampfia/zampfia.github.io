@@ -10,8 +10,10 @@ export default function About() {
         <div>
             <Layout>
             </Layout>
-            <h1 className="title">NOI ABBIAMO TANTI SOLDI</h1>
-            <text className="label">Zampa is <i><b>RE MONDUS</b></i></text>
+            <div className="margin">
+                <h1 className="title">NOI ABBIAMO TANTI SOLDI</h1>
+                <text className="label">Zampa is <i><b>RE MONDUS</b></i></text>
+            </div>
         </div>
     )
 }

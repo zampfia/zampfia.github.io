@@ -15,17 +15,19 @@ export default function Giudici() {
         <div>
             <Layout>
             </Layout>
-            <h1 className='center' id="title">Ecco i Giudici di Mastirchof 25</h1>
-            <Zampa>
-            </Zampa>
-            <Gigi>
-            </Gigi>
-            <Bufala>
-            </Bufala>
-            <Franco>
-            </Franco>
-            <Giuseppe>
-            </Giuseppe>
+            <div className="margin">
+                <h1 className='center' id="title">Ecco i Giudici di Mastirchof 25</h1>
+                <Zampa>
+                </Zampa>
+                <Gigi>
+                </Gigi>
+                <Bufala>
+                </Bufala>
+                <Franco>
+                </Franco>
+                <Giuseppe>
+                </Giuseppe>
+            </div>
         </div>
     )
 }

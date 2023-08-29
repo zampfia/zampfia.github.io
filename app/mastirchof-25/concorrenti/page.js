@@ -10,7 +10,9 @@ export default function Concorrenti() {
         <div>
             <Layout>
             </Layout>
-            <h1 id="header" className='center'>Al momento non abbiamo i risultati<br />Torna più tardi (1/2 mesi)</h1>
+            <div className="margin">
+                <h1 id="header" className='center'>Al momento non abbiamo i risultati<br />Torna più tardi (1/2 mesi)</h1>
+            </div>
         </div>
     )
 }

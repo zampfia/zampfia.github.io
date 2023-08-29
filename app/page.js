@@ -12,13 +12,15 @@ export const metadata = {
 };
 
 const HomePage = () => (
-  <div>
-    <Layout>
-    </Layout>
-    <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
-    <ImageContainer />
-    <ScrollingImages />
-  </div>
+    <div>
+        <Layout>
+        </Layout>
+        <div className="margin">
+            <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
+            <ImageContainer />
+            <ScrollingImages />
+        </div>
+    </div>
 );
 
 export default HomePage;
