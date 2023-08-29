@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import "app/styles/page.css";
+import "./styles/page.css";
 import ScrollingImages from './scrollingImages';
 import Layout from './layoutMenu';
 

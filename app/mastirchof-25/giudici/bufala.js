@@ -1,4 +1,4 @@
-import "app/styles/giudici.css"
+import "../../styles/giudici.css"
 import Image from 'next/image';
 
 const Bufala = () => {  

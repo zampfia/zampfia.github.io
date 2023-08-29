@@ -1,4 +1,4 @@
-import "app/styles/zampacy.css"
+import "../styles/zampacy.css"
 import Layout from "app/layoutMenu.js"
 
 export default function Zampacy() {

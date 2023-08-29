@@ -1,5 +1,5 @@
 import Layout from '../../layoutMenu';
-import "app/styles/giudici.css";
+import "../../styles/giudici.css";
 import Zampa from "./zampa.js";
 import Gigi from "./gigi.js";
 import Bufala from "./bufala.js";
