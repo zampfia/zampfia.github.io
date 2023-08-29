@@ -17,9 +17,9 @@ const Layout = () => {
 
     return (
         <div>
-            <nav>
+            <nav className="navbar">
                 <div className="divbar">
-                    <h1>Zampfia, S.D.A.Z.</h1>
+                    <text className="titlebar">Zampfia, S.D.A.Z.</text>
                     <button onClick={handleMenuClick} id={"toggle-button"}></button>
                 </div>
             </nav>
