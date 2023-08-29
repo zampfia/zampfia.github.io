@@ -17,7 +17,12 @@ const Layout = () => {
 
     return (
         <div>
-            <button onClick={handleMenuClick} id={"toggle-button"}></button>
+            <nav>
+                <div className="divbar">
+                    <h1>Zampfia, S.D.A.Z.</h1>
+                    <button onClick={handleMenuClick} id={"toggle-button"}></button>
+                </div>
+            </nav>
             <SideMenu isOpen={isMenuOpen} onClose={handleCloseMenu} />
         </div>
     );
