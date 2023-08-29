@@ -2,9 +2,11 @@
     font-family: 'Oswald';
     src: url('/fonts/Oswald/static/Oswald-Regular.ttf') format('truetype');
     /* Add more font formats if necessary */
-  }
+}
 
 body {
-  font-family: 'Oswald', sans-serif;
-  margin-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 1px;
 }
