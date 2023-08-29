@@ -14,14 +14,24 @@
     display: flex;
     flex-direction: row;
     height: 50px;
+    justify-items: center;
+    width: 100%;
 }
 
-.title {
+.navbar {
+    background-color: rgb(160, 189, 209);
+}
+
+.titlebar {
     font-size: 25px;
     font-weight: bold;
     margin-left: 15px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+body {
+    background-color: rgb(231, 237, 241);
 }
 
 .margin {
