@@ -11,22 +11,18 @@ export const metadata = {
 };
 
 export default function Giudici() {
-    return(
+    const [unicStyle, setUnicStyle] = useLocalStorage<boolean>("unicStyle", false)
+
+	return (
         <div>
-            <Layout>
-            </Layout>
+            <Layout />
             <div className="margin">
                 <h1 className='center' id="title">Ecco i Giudici di Mastirchof 25</h1>
-                <Zampa>
-                </Zampa>
-                <Gigi>
-                </Gigi>
-                <Bufala>
-                </Bufala>
-                <Franco>
-                </Franco>
-                <Giuseppe>
-                </Giuseppe>
+                <Zampa />
+                <Gigi />
+                <Bufala />
+                <Franco />
+                <Giuseppe />
             </div>
         </div>
     )

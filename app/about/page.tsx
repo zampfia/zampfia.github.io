@@ -6,10 +6,9 @@ export const metadata = {
 };
 
 export default function About() {
-    return(
+	return (
         <div>
-            <Layout>
-            </Layout>
+            <Layout />
             <div className="margin">
                 <h1 className="title">NOI ABBIAMO TANTI SOLDI</h1>
                 <text className="label">Zampa is <i><b>RE MONDUS</b></i></text>
