@@ -11,8 +11,6 @@ export const metadata = {
 };
 
 export default function Giudici() {
-    const [unicStyle, setUnicStyle] = useLocalStorage<boolean>("unicStyle", false)
-
 	return (
         <div>
             <Layout />
