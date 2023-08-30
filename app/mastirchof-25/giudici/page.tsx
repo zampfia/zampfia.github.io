@@ -1,10 +1,10 @@
 import Layout from '../../layoutMenu';
 import "../../styles/giudici.css";
-import Zampa from "./zampa.js";
-import Gigi from "./gigi.js";
-import Bufala from "./bufala.js";
-import Franco from "./franco.js";
-import Giuseppe from "./giuseppe.js";
+import Zampa from "./zampa"
+import Gigi from "./gigi"
+import Bufala from "./bufala"
+import Franco from "./franco"
+import Giuseppe from "./giuseppe"
 
 export const metadata = {
     title: "I Giudici di Mastirchof 25",
