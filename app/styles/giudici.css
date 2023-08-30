@@ -38,6 +38,7 @@
 
 .rightimage {
     grid-area: 1 / 3 / span 1 / span 1;
+    margin-left: auto;
 }
 
 #title {
@@ -74,6 +75,9 @@
         flex:100%;
         padding-left: 30px;
         padding-bottom: 30px;
+    }
+    .francochilddiv {
+        margin-left: 25%;
     }
     #image {
         padding-left: 20px;
