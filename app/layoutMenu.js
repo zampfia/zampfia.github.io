@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import SideMenu from './sideMenu';
 import "./styles/layout.css";
 
-const Layout = () => {
+export default function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleMenuClick = () => {
@@ -27,5 +27,3 @@ const Layout = () => {
         </div>
     );
 };
-
-export default Layout;
