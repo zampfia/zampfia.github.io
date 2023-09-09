@@ -28,7 +28,6 @@ const getRandomImage = () => {
   const handleClick = () => {
     setClickCount(prevCount => prevCount + 1);
     setRandomImage(getRandomImage());
-    console.log(randomImage);
   };
 
   return (
