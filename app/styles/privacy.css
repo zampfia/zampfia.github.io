@@ -9,19 +9,19 @@
     margin-left: 15%;
 }
 
-h3 {
+.header {
     font-size: 28px;
     font-weight: bold;
 }
 
-text {
+.text {
     font-size: 24px;
 }
 
-li {
+.li {
     font-size: 21px;
 }
 
-ul {
+.ul {
     list-style-type: circle;
 }
