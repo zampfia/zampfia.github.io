@@ -1,6 +1,6 @@
 import Link from "next/link"
-import "./styles/footer.css"
-import "./styles/layout.css"
+import "../styles/footer.css"
+import "../styles/layout.css"
 
 const StickyFooter = () => {
     return(

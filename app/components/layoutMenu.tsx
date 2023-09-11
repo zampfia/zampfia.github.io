@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import SideMenu from './sideMenu';
-import "./styles/layout.css";
+import "../styles/layout.css";
 
 export default function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

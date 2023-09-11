@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import "./styles/page.css";
-import ScrollingImages from './scrollingImages';
-import Layout from './layoutMenu';
+import ScrollingImages from './components/scrollingImages';
 
-const ImageContainer = dynamic(() => import('./imgContainer'), {
+
+const ImageContainer = dynamic(() => import('./components/imgContainer'), {
     ssr: false,
 });
 
@@ -13,13 +13,10 @@ export const metadata = {
 
 export default function HomePage() {
 	return (
-        <div>
-            <Layout />
-            <div className="margin">
-                <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
-                <ImageContainer />
-                <ScrollingImages />
-            </div>
+        <div className="margin">
+            <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
+            <ImageContainer />
+            <ScrollingImages />
         </div>
     );
 };

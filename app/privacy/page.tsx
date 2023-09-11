@@ -1,10 +1,10 @@
-import Layout from "../layoutMenu";
+import Layout from "../components/layoutMenu";
 import "../styles/privacy.css"
 
 export default function Privacy() {
     return(
         <div>
-            <Layout />
+            
             <div className="margin">
                 <h1 id="title">Privacy Policy</h1>
                 <div className="childdiv">

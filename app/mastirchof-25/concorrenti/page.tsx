@@ -1,4 +1,4 @@
-import Layout from '../../layoutMenu';
+
 import "../../styles/concorrenti.css"
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 export default function Concorrenti() {
 	return (
         <div>
-            <Layout />
+            
             <div className="margin">
                 <h1 id="header" className='center'>Al momento non abbiamo i risultati<br />Torna più tardi (1/2 mesi)</h1>
             </div>

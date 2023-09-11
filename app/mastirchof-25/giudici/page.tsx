@@ -1,4 +1,4 @@
-import Layout from '../../layoutMenu';
+
 import "../../styles/giudici.css";
 import Zampa from "./zampa"
 import Gigi from "./gigi"
@@ -13,7 +13,7 @@ export const metadata = {
 export default function Giudici() {
 	return (
         <div>
-            <Layout />
+            
             <div className="margin">
                 <h1 className='center' id="title">Ecco i Giudici di Mastirchof 25</h1>
                 <Zampa />

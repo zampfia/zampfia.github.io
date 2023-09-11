@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react';
-import './styles/scrollingImages.css';
+import '../styles/scrollingImages.css';
 
 const ScrollingImages = () => {
   const containerRef = useRef(null);

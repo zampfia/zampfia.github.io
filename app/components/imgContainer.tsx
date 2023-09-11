@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import './styles/page.css';
+import '../styles/page.css';
 
 const getRandomImage = () => {
   const images = [

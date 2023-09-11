@@ -1,10 +1,10 @@
 import "../styles/zampacy.css"
-import Layout from "../layoutMenu"
+import Layout from "../components/layoutMenu"
 
 export default function Zampacy() {
 	return (
         <div>
-            <Layout />
+            
             <div className="margin">
                 <h1 id="title">NOI TENIAMO DATI<br />VOI TENETE NIENTE</h1>
                 <div id="empty"></div>
