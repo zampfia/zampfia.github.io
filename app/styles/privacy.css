@@ -1,0 +1,27 @@
+#title {
+    font-family: Oswald, sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.childdiv {
+    margin-left: 15%;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+text {
+    font-size: 24px;
+}
+
+li {
+    font-size: 21px;
+}
+
+ul {
+    list-style-type: circle;
+}
