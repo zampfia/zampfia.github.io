@@ -17,11 +17,13 @@ const getRandomImage = () => {
   const ImageContainer = () => {
     const [clickCount, setClickCount] = useState(0);
     const [randomImage, setRandomImage] = useState(null);
+    const [zampaCount, setZampaCount] = useState(0);
 
     useEffect(() => {
       if (clickCount === 30) {
-      alert('HAI VINTO UN ZAMPA!\nTI VERRA\' SPEDITO A CASA TRA 2/3 GIORNI LAVORATIVI!');
-      setClickCount(0);
+        alert('HAI VINTO UN ZAMPA!\nTI VERRA\' SPEDITO A CASA TRA 2/3 GIORNI LAVORATIVI!');
+        setClickCount(0);
+        setZampaCount(zampaCount + 1);
       }
   }, [clickCount]);
 
@@ -35,6 +37,7 @@ const getRandomImage = () => {
       <button className="button" onClick={handleClick}>Cliccami</button>
       <p className="label">Hai cliccato {clickCount} volte!</p>
       <p className="label">Ti mancano {30 - clickCount} click per il premio!</p>
+      <p className="label">Hai vinto {zampaCount} Zampa</p>
       {randomImage && <img className="image" src={randomImage} alt="Random Image" />}
     </div>
   );
