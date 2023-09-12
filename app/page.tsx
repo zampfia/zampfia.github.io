@@ -1,18 +1,17 @@
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import "./styles/page.css";
-import ScrollingImages from './components/scrollingImages';
+import ScrollingImages from "./components/scrollingImages";
 
-const ImageContainer = dynamic(() => import('./components/imgContainer'), {
+const ImageContainer = dynamic(() => import("./components/imgContainer"), {
     ssr: false,
 });
 
 export default function HomePage() {
-	return (
+    return (
         <div className="margin">
-            <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
-            <ImageContainer />
-            <ScrollingImages />
+        <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
+        <ImageContainer />
+        <ScrollingImages />
         </div>
     );
-};
-
+}

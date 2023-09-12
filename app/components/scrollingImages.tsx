@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
-import '../styles/scrollingImages.css';
+import React, { useRef, useEffect } from "react";
+import "../styles/scrollingImages.css";
 
 const ScrollingImages = () => {
   const containerRef = useRef(null);
@@ -14,10 +14,10 @@ const ScrollingImages = () => {
     };
 
     const container = containerRef.current;
-    container.addEventListener('wheel', handleWheel, { passive: false });
+    container.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      container.removeEventListener('wheel', handleWheel);
+      container.removeEventListener("wheel", handleWheel);
     };
   }, []);
 
