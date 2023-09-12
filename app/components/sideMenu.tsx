@@ -12,18 +12,16 @@ const SideMenu = ({ isOpen, onClose }) => {
                 ></button>
             </div>
             <div className={`side-menu ${isOpen ? "open" : ""}`}>
-                <button className={"close-button"} onClick={onClose}></button>
+                <button
+                    className="close-button mb-2"
+                    onClick={onClose}
+                ></button>
                 <ul>
-                    <li>
-                        <Link className="link" href="/">
-                            Home Page
-                            <br />
-                        </Link>
+                    <li className="pl-5">
+                        <Link href="/">Home Page</Link>
                     </li>
-                    <li>
-                        <Link className="link" href="/about">
-                            Chi siamo
-                        </Link>
+                    <li className="pl-5">
+                        <Link href="/about">Chi siamo</Link>
                     </li>
                 </ul>
             </div>

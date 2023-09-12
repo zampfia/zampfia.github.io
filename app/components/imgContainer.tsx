@@ -36,14 +36,17 @@ const ImageContainer = () => {
 
     return (
         <div>
-            <button className="button" onClick={handleClick}>
+            <button
+                className="rounded-full bg-sky-500 px-5 py-2 text-lg font-normal leading-5 text-white hover:bg-sky-700"
+                onClick={handleClick}
+            >
                 Cliccami
             </button>
-            <p className="label">Hai cliccato {clickCount} volte!</p>
-            <p className="label">
+            <p className="my-2 text-2xl">Hai cliccato {clickCount} volte!</p>
+            <p className="my-1 text-2xl">
                 Ti mancano {30 - clickCount} click per il premio!
             </p>
-            <p className="label">Hai vinto {zampaCount} Zampa</p>
+            <p className="my-2 mb-4 text-2xl">Hai vinto {zampaCount} Zampa</p>
             {randomImage && (
                 <img className="image" src={randomImage} alt="Random Image" />
             )}

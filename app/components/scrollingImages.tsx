@@ -22,7 +22,7 @@ const ScrollingImages = () => {
     }, []);
 
     return (
-        <div className="container" ref={containerRef}>
+        <div className="container mb-1 max-w-full" ref={containerRef}>
             <div className="images">
                 <img src="/photos/zampa4.jpg" alt="Zampa 4" />
                 <img src="/photos/zampa5.jpg" alt="Zampa 5" />

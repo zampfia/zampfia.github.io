@@ -9,7 +9,7 @@ const ImageContainer = dynamic(() => import("./components/imgContainer"), {
 export default function HomePage() {
     return (
         <div className="margin">
-            <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
+            <h1 className="my-3 text-4xl font-bold">ZAMPA E' IL PIU' GRANDE</h1>
             <ImageContainer />
             <ScrollingImages />
         </div>

@@ -13,7 +13,7 @@ export default function Giudici() {
     return (
         <div>
             <div className="margin">
-                <h1 className="center" id="title">
+                <h1 className="my-3 text-center" id="title">
                     Ecco i Giudici di Mastirchof 25
                 </h1>
                 <Zampa />
