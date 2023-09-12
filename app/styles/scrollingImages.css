@@ -1,16 +1,16 @@
 .container {
-  width: 100% - 20px;
-  overflow-x: scroll;
-  white-space: nowrap;
+    width: 100% - 20px;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .images {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 .images img {
-  display: inline-block;
-  width: 1100px;
-  height: 350px;
-  margin-right: 10px;
+    display: inline-block;
+    width: 1100px;
+    height: 350px;
+    margin-right: 10px;
 }

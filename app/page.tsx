@@ -9,9 +9,9 @@ const ImageContainer = dynamic(() => import("./components/imgContainer"), {
 export default function HomePage() {
     return (
         <div className="margin">
-        <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
-        <ImageContainer />
-        <ScrollingImages />
+            <h1 className="title">ZAMPA E' IL PIU' GRANDE</h1>
+            <ImageContainer />
+            <ScrollingImages />
         </div>
     );
 }

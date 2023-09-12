@@ -1,29 +1,29 @@
 name: Assign Tag to Inactive Issues/PRs
 
 on:
-  schedule:
-    - cron: "0 0 */7 * *"
+    schedule:
+        - cron: "0 0 */7 * *"
 
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
-  assign-tag:
-    runs-on: ubuntu-latest
+    assign-tag:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.x"
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: "3.x"
 
-      - name: Install dependencies
-        run: pip install PyGithub
+            - name: Install dependencies
+              run: pip install PyGithub
 
-      - name: Assign tag to inactive issues/PRs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python ./.github/suppl/assign_tag.py
+            - name: Assign tag to inactive issues/PRs
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  python ./.github/suppl/assign_tag.py

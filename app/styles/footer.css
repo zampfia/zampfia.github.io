@@ -1,17 +1,17 @@
 footer {
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(
-    160,
-    189,
-    209
-  ); /* Adjust the background color as needed */
-  color: #fff; /* Adjust the text color as needed */
-  padding: 10px 0;
-  text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(
+        160,
+        189,
+        209
+    ); /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    padding: 10px 0;
+    text-align: center;
 }
 
 .link {
-  padding-left: 5px;
-  padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }

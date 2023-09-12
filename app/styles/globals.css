@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Oswald";
-  src: url("/fonts/Oswald/static/Oswald-Regular.ttf") format("truetype");
-  /* Add more font formats if necessary */
+    font-family: "Oswald";
+    src: url("/fonts/Oswald/static/Oswald-Regular.ttf") format("truetype");
+    /* Add more font formats if necessary */
 }
 
 body {
-  font-family: "Oswald", sans-serif;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+    font-family: "Oswald", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
