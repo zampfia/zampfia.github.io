@@ -1,6 +1,7 @@
 import * as Database from "../../external/db";
 import { ZampaFormResponse } from "../../components/types/zampaFormResponse";
 import { log } from "console";
+import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
     const res = await request.json();
@@ -20,7 +21,7 @@ export async function POST(request: Request) {
         response,
     );
     if (result === true) {
-        return new Response("Received by Database", {
+        return new NextResponse("Received by Database", {
             status: 200,
         });
     } else if (result === false) {
@@ -32,7 +33,7 @@ export async function POST(request: Request) {
                 "\n" +
                 response,
         );
-        return new Response("Errored. Check logs", {
+        return new NextResponse("Errored. Check logs", {
             status: 500,
         });
     }
