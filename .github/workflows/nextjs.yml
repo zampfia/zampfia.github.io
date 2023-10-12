@@ -83,9 +83,6 @@ jobs:
               env:
                   MONGODB_CONNECT: ${{ secrets.MONGODB_CONNECT }}
               if: "!contains(github.event.head_commit.message, '[skip ci]]')"
-            - name: Static HTML export with Next.js
-              run: ${{ steps.detect-package-manager.outputs.runner }} next export
-              if: "!contains(github.event.head_commit.message, '[skip ci]]')"
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               if: "!contains(github.event.head_commit.message, '[skip ci]]')"
