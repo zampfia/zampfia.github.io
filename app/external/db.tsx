@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_CONNECT;
+const uri = process.env.MONGODB_URI;
 
 export async function insertToDB<T>(db: string, collect: string, doc: T) {
     const client = new MongoClient(uri);
