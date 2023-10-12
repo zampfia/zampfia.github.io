@@ -85,7 +85,7 @@ jobs:
               run: ${{ steps.detect-package-manager.outputs.runner }} next export
               if: "!contains(github.event.head_commit.message, '[skip ci]]')"
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v2
               if: "!contains(github.event.head_commit.message, '[skip ci]]')"
               with:
                   path: ./out
