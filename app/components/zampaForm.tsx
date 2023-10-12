@@ -51,7 +51,7 @@ const ZampaForm = ({ close }) => {
     };
 
     return (
-        <div className="z-[999] flex items-center justify-center xs:absolute minxs:fixed minxs:bottom-0 minxs:top-0 minxs:h-[100%] minxs:w-[100%]">
+        <div className="z-[999] flex items-center justify-center bg-[rgb(0,0,0,0.35)] xs:absolute minxs:fixed minxs:bottom-0 minxs:top-0 minxs:h-[100%] minxs:w-[100%]">
             <div className="rounded-[5px] bg-white p-[20px] drop-shadow-[0_2px_5px_rgba(0,0,0,0.2)] xs:m-auto xs:flex xs:flex-col xs:overflow-y-scroll xs:bg-[rgb(246,248,250)]">
                 <div className="flex">
                     <text className="label text-[19px] font-extrabold xs:text-[16px] minxs:pr-96">
