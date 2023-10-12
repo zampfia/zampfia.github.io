@@ -14,7 +14,7 @@
         "babel": "^6.23.0",
         "dotenv": "^16.3.1",
         "eslint": "8.51.0",
-        "eslint-config-next": "13.4.3",
+        "eslint-config-next": "13.5.4",
         "mongodb": "^5.8.1",
         "next": "^13.5.4",
         "postcss": "8.4.31",
