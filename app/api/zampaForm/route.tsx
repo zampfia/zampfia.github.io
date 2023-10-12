@@ -2,8 +2,6 @@ import * as Database from "../../external/db";
 import { ZampaFormResponse } from "../../components/types/zampaFormResponse";
 import { log } from "console";
 
-export const dynamic = "force-static    ";
-
 export async function POST(request: Request) {
     const res = await request.json();
     const response: ZampaFormResponse = {
