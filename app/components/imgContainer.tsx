@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "../styles/page.css";
+import ZampaForm from "./zampaForm";
 
 const getRandomImage = () => {
     const images = [
@@ -14,18 +15,21 @@ const getRandomImage = () => {
     return images[randomIndex];
 };
 
+export var showingFrame;
+
 const ImageContainer = () => {
     const [clickCount, setClickCount] = useState(0);
     const [randomImage, setRandomImage] = useState(null);
     const [zampaCount, setZampaCount] = useState(0);
+    const [showFrame, setShowFrame] = useState(false);
 
     useEffect(() => {
         if (clickCount === 30) {
-            alert(
-                "HAI VINTO UN ZAMPA!\nTI VERRA' SPEDITO A CASA TRA 2/3 GIORNI LAVORATIVI!",
-            );
+            setShowFrame(true);
+            showingFrame = true;
             setClickCount(0);
             setZampaCount(zampaCount + 1);
+            setRandomImage(null);
         }
     }, [clickCount]);
 
@@ -34,22 +38,38 @@ const ImageContainer = () => {
         setRandomImage(getRandomImage());
     };
 
+    const handleClose = () => {
+        setShowFrame(false);
+        showingFrame = true;
+    };
+
     return (
         <div>
-            <button
-                className="rounded-full bg-sky-500 px-5 py-2 text-lg font-normal leading-5 text-white hover:bg-sky-700"
-                onClick={handleClick}
-            >
-                Cliccami
-            </button>
-            <p className="my-2 text-2xl">Hai cliccato {clickCount} volte!</p>
-            <p className="my-1 text-2xl">
-                Ti mancano {30 - clickCount} click per il premio!
-            </p>
-            <p className="my-2 mb-4 text-2xl">Hai vinto {zampaCount} Zampa</p>
-            {randomImage && (
-                <img className="image" src={randomImage} alt="Random Image" />
-            )}
+            {showFrame && <ZampaForm close={handleClose} />}
+            <div className="margin">
+                <button
+                    className="rounded-full bg-sky-500 px-5 py-2 text-lg font-normal leading-5 text-white hover:bg-sky-700"
+                    onClick={handleClick}
+                >
+                    Cliccami
+                </button>
+                <p className="my-2 text-2xl">
+                    Hai cliccato {clickCount} volte!
+                </p>
+                <p className="my-1 text-2xl">
+                    Ti mancano {30 - clickCount} click per il premio!
+                </p>
+                <p className="my-2 mb-4 text-2xl">
+                    Hai vinto {zampaCount} Zampa
+                </p>
+                {randomImage && (
+                    <img
+                        className="image"
+                        src={randomImage}
+                        alt="Random Image"
+                    />
+                )}
+            </div>
         </div>
     );
 };

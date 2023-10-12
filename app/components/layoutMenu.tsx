@@ -16,8 +16,8 @@ export default function Layout() {
     };
 
     return (
-        <div>
-            <nav className="navbar">
+        <div className="sticky top-0">
+            <nav className="navbar mb-2">
                 <div className="divbar">
                     <text className="titlebar">Zampfia, S.D.A.Z.</text>
                     <button

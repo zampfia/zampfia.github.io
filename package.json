@@ -12,6 +12,7 @@
     "dependencies": {
         "autoprefixer": "10.4.14",
         "babel": "^6.23.0",
+        "dotenv": "^16.3.1",
         "eslint": "8.40.0",
         "eslint-config-next": "13.4.3",
         "mongodb": "^5.8.1",
@@ -23,6 +24,7 @@
     "devDependencies": {
         "@types/node": "^20.5.7",
         "@types/react": "^18.2.21",
+        "daisyui": "^3.7.3",
         "eslint-config-prettier": "^9.0.0",
         "husky": "^8.0.3",
         "lint-staged": "^14.0.1",

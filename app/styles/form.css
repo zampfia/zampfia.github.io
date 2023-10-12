@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+    .field {
+        background-color: white;
+    }
+
+    .label-text-2 {
+        color: rgb(31, 41, 55);
+    }
+}
+
+.close-form-button {
+    height: 50px;
+    width: 50px;
+    background: url(/photos/close.png);
+    border-style: none;
+    background-color: none;
+}
+
+.asterisk::after {
+    content: " *";
+    color: red;
+}

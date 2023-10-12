@@ -5,7 +5,7 @@ export default function Privacy() {
     return (
         <div>
             <div className="margin">
-                <h1 id="title">Privacy Poli className="li"cy</h1>
+                <h1 id="title">Privacy Policy</h1>
                 <div className="childdiv">
                     <h3 className="header">Che dati otteniamo?</h3>
                     <text className="text">
@@ -21,7 +21,7 @@ export default function Privacy() {
                     <ul className="ul">
                         <li className="li">Fornire i nostri servizi</li>
                         <li className="li">
-                            Offrire servizi personali className="li"zzati
+                            Offrire servizi personali personalizzati
                         </li>
                     </ul>
                     <h3 className="header">Come otteniamo i tuoi dati?</h3>
@@ -29,14 +29,15 @@ export default function Privacy() {
                         Otteniamo i tuoi dati attreverso:
                     </text>
                     <ul className="ul">
-                        <li className="li">
-                            Modul className="ul"i inviati da te
-                        </li>
+                        <li className="li">Informazione inserite nei moduli</li>
                     </ul>
                     <h3 className="header">Dove conserviamo i tuoi dati?</h3>
                     <text className="text">
                         Vengono conservati in database offerti da{" "}
-                        <a href="https://www.mongodb.com/atlas">
+                        <a
+                            className="underline"
+                            href="https://www.mongodb.com/atlas"
+                        >
                             MongoDB Atlas
                         </a>
                     </text>
@@ -58,7 +59,10 @@ export default function Privacy() {
                     </ul>
                     <text className="text">
                         Per qualasiasi richiesta inviare email a:{" "}
-                        <a href="mailto:legal@zampfia.onmicrosoft.com">
+                        <a
+                            className="underline"
+                            href="mailto:legal@zampfia.onmicrosoft.com"
+                        >
                             legal@zampfia.onmicrosoft.com
                         </a>
                     </text>

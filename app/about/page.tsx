@@ -10,10 +10,7 @@ export default function About() {
             <div className="margin">
                 <h1 className="title">NOI ABBIAMO TANTI SOLDI</h1>
                 <text className="label">
-                    Zampa is{" "}
-                    <i>
-                        <b>RE MONDUS</b>
-                    </i>
+                    Zampa is<span className="font-bold italic"> RE MONDUS</span>
                 </text>
             </div>
         </div>

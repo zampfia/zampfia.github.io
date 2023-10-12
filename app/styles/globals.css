@@ -15,3 +15,13 @@ body {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: light;
+    }
+    body {
+        color: black;
+        background: white;
+    }
+}

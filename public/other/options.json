@@ -1,0 +1,64 @@
+{
+    "nations": [
+        {
+            "id": "mars",
+            "display": "Marte"
+        },
+        {
+            "id": "franco",
+            "display": "Franco"
+        },
+        {
+            "id": "iceland",
+            "display": "Islanda (vicino a Padova)"
+        },
+        {
+            "id": "padova",
+            "display": "Padova (vicino all'Islanda)"
+        },
+        {
+            "id": "kepler_1356b",
+            "display": "Kepler-1356b"
+        },
+        {
+            "id": "qatar",
+            "display": "Qatar"
+        },
+        {
+            "id": "saint_lucia",
+            "display": "Santa Lucia"
+        },
+        {
+            "id": "hong_kong",
+            "display": "Hong Kong"
+        },
+        {
+            "id": "sierra_leone",
+            "display": "Sierra Leone"
+        },
+        {
+            "id": "hat_p_66b",
+            "display": "HAT-P-66b"
+        },
+        {
+            "id": "australia",
+            "display": "Australia"
+        },
+        {
+            "id": "gregorio_xiv",
+            "display": "Papa Gregorio XIV"
+        },
+        {
+            "id": "pio_xi",
+            "display": "Papa Pio XI"
+        },
+        {
+            "id": "2mass_j22362452+4751425_b",
+            "display": "2MASS J22362452+4751425 b"
+        },
+        {
+            "id": "innocenzo_ii",
+            "display": "Papa Innocenzo II"
+        }
+    ]
+}
