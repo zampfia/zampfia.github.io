@@ -22,7 +22,7 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@types/node": "^20.5.7",
+        "@types/node": "^20.8.4",
         "@types/react": "^18.2.21",
         "daisyui": "^3.7.3",
         "eslint-config-prettier": "^9.0.0",
