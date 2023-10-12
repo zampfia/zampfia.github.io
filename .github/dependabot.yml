@@ -14,7 +14,7 @@ updates:
       include: "scope"
     labels:
       - "npm"
-      - "dependecies"
+      - "dependencies"
     open-pull-requests-limit: 5
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -26,5 +26,5 @@ updates:
       include: "scope"
     labels:
       - "actions"
-      - "dependecies"
+      - "dependencies"
     open-pull-requests-limit: 3
