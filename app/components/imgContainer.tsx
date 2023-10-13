@@ -15,8 +15,6 @@ const getRandomImage = () => {
     return images[randomIndex];
 };
 
-export var showingFrame;
-
 const ImageContainer = () => {
     const [clickCount, setClickCount] = useState(0);
     const [randomImage, setRandomImage] = useState(null);
@@ -26,7 +24,6 @@ const ImageContainer = () => {
     useEffect(() => {
         if (clickCount === 30) {
             setShowFrame(true);
-            showingFrame = true;
             setClickCount(0);
             setZampaCount(zampaCount + 1);
             setRandomImage(null);
@@ -40,7 +37,6 @@ const ImageContainer = () => {
 
     const handleClose = () => {
         setShowFrame(false);
-        showingFrame = true;
     };
 
     return (
