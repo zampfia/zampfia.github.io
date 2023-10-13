@@ -1,12 +1,13 @@
-import "../styles/form.css";
-import data from "../../public/other/options.json";
+import "@/styles/form.css";
+import data from "@p/other/options.json";
 import Link from "next/link";
 
 export const TextField = ({
     label,
     id,
-    placeholder,
+    placeholder = "",
     classes = "",
+    input_classes = "",
     required = false,
 }) => {
     return (
@@ -25,7 +26,39 @@ export const TextField = ({
             <input
                 type="text"
                 placeholder={placeholder}
-                className="field input input-bordered w-full max-w-xs pl-2"
+                className={`field input input-bordered w-full max-w-xs pl-2  ${input_classes}`}
+                id={id}
+                name={id}
+                required={required}
+            />
+        </div>
+    );
+};
+
+export const TextAreaField = ({
+    label,
+    id,
+    placeholder = "",
+    classes = "",
+    required = false,
+}) => {
+    return (
+        <div
+            className={`form-control w-full max-w-sm xs:max-w-[9rem] ${classes}`}
+        >
+            <label className="label">
+                <span
+                    className={`label-text-2 label-text text-base xs:text-sm ${
+                        required ? "asterisk" : ""
+                    }`}
+                >
+                    {label}
+                </span>
+            </label>
+            <textarea
+                placeholder={placeholder}
+                className="field input input-bordered h-[108px] w-full max-w-sm px-4 py-1 pl-2"
+                rows={4}
                 id={id}
                 name={id}
                 required={required}
@@ -37,7 +70,7 @@ export const TextField = ({
 export const EmailField = ({
     label,
     id,
-    placeholder,
+    placeholder = "",
     classes = "",
     required = false,
 }) => {
