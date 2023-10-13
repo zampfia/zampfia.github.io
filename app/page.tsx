@@ -1,12 +1,12 @@
 import dynamic from "next/dynamic";
-import "./styles/page.css";
-import ScrollingImages from "./components/scrollingImages";
+import "@/styles/page.css";
+import ScrollingImages from "@/components/scrollingImages";
 
 if (process.env.NODE_ENV !== "production") {
     require("dotenv").config();
 }
 
-const ImageContainer = dynamic(() => import("./components/imgContainer"), {
+const ImageContainer = dynamic(() => import("@/components/imgContainer"), {
     ssr: false,
 });
 

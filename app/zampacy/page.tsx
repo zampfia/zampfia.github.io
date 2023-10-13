@@ -1,4 +1,4 @@
-import "../styles/zampacy.css";
+import "@/styles/zampacy.css";
 
 export default function Zampacy() {
     return (

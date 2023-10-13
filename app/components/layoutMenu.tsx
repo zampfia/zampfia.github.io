@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import SideMenu from "./sideMenu";
-import "../styles/layout.css";
+import SideMenu from "@/components/sideMenu";
+import "@/styles/layout.css";
 
 export default function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

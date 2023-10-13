@@ -1,4 +1,4 @@
-import "../../styles/concorrenti.css";
+import "@/styles/concorrenti.css";
 
 export const metadata = {
     title: "I Concorrenti di Mastirchof 25",

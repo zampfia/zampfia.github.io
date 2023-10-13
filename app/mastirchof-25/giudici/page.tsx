@@ -1,4 +1,4 @@
-import "../../styles/giudici.css";
+import "@/styles/giudici.css";
 import Zampa from "./zampa";
 import Gigi from "./gigi";
 import Bufala from "./bufala";
