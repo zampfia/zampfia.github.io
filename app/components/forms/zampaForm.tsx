@@ -1,8 +1,8 @@
 "use client";
 
 import * as FormFields from "./formQueries";
-import "../styles/form.css";
-import { ZampaFormResponse } from "./types/zampaFormResponse";
+import "@/styles/form.css";
+import { ZampaFormResponse } from "@/components/types/zampaFormResponse";
 
 const ZampaForm = ({ close }) => {
     var sending = false;

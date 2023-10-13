@@ -1,5 +1,4 @@
-import Layout from "../components/layoutMenu";
-import "../styles/privacy.css";
+import "@/styles/privacy.css";
 
 export default function Privacy() {
     return (

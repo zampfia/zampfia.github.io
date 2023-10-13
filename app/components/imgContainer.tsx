@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import "../styles/page.css";
-import ZampaForm from "./zampaForm";
+import "@/styles/page.css";
+import ZampaForm from "@/components/forms/zampaForm";
 
 const getRandomImage = () => {
     const images = [
