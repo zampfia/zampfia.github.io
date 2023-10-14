@@ -25,4 +25,4 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  python ./.github/suppl/create_prod_pr.py
+                  python ./.github/suppl/dev-prod/create_prod_pr.py
