@@ -1,3 +1,5 @@
+name: Create dev->prod PR on push when requested
+
 on:
     push:
         branches:
