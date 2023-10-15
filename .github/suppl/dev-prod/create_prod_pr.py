@@ -37,7 +37,15 @@ for commit in dev_commits:
         changed.hashes.append(commit.sha)
     if commit.author.login == "dependabot[bot]":
         if commit.commit.message.startswith("Bump"):
-            updated.titles.append(commit.commit.message.split("\n")[0])
+            if "and" in commit.commit.message:
+                s = commit.commit.message.split("\n")[0].split("Bump ")[1]
+                updated.titles.append(s)
+            else: 
+                s = commit.commit.message.split("\n")[0].split("Bump ")[1]
+                a = s.split(" from ")[0]
+                b = s.split(" from ")[1].split(" to ")[0]
+                c = s.split(" to ")[1]
+                updated.titles.append(a + " [" + b + "->" + c +"]")
         else:
             s = commit.commit.message.split(": bump ")[1].split("\n")[0]
             a = s.split(" from ")[0]
