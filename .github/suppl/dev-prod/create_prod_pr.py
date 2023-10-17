@@ -23,19 +23,25 @@ for line in head_commit_message:
 added = CommitList()
 removed = CommitList()
 changed = CommitList()
+fixed = CommitList()
 updated = CommitList()
 
 for commit in dev_commits:
-    if "[add]" in commit.commit.message:
+    if "[no prod]" in commit.commit.message:
+        continue
+    elif "[add]" in commit.commit.message:
         added.titles.append(commit.commit.message.split("\n")[0])
         added.hashes.append(commit.sha)
-    if "[remove]" in commit.commit.message:
+    elif "[remove]" in commit.commit.message:
         removed.titles.append(commit.commit.message.split("\n")[0])
         removed.hashes.append(commit.sha)
-    if "[change]" in commit.commit.message:
+    elif "[change]" in commit.commit.message:
         changed.titles.append(commit.commit.message.split("\n")[0])
         changed.hashes.append(commit.sha)
-    if commit.author.login == "dependabot[bot]":
+    elif "[fix]" in commit.commit.message:
+        fixed.titles.append(commit.commit.message.split("\n")[0])
+        fixed.hashes.append(commit.sha)
+    elif commit.author.login == "dependabot[bot]":
         if commit.commit.message.startswith("Bump"):
             if "and" in commit.commit.message:
                 s = commit.commit.message.split("\n")[0].split("Bump ")[1]
@@ -56,21 +62,42 @@ for commit in dev_commits:
 
 body = ""
 
-body += "Added:\n"
-for i in range(added.titles.count()):
-    body += "- " + added.titles[i].strip() + " (" + added.hashes[i] + ")\n"
+if added.titles.count() is not 0:
+    body += "Added:\n"
+    for i in range(added.titles.count()):
+        body += "- " + added.titles[i].strip() + " (" + added.hashes[i] + ")\n"
 
-body += "\nRemoved:\n"
-for i in range(removed.titles.count()):
-    body += "- " + removed.titles[i].strip() + " (" + removed.hashes[i] + ")\n"
+if removed.titles.count() is not 0:
+    if body == "":
+        body += "Removed:\n"
+    else:
+        body += "\nRemoved:\n"
+    for i in range(removed.titles.count()):
+        body += "- " + removed.titles[i].strip() + " (" + removed.hashes[i] + ")\n"
 
-body += "\nChanged:\n"
-for i in range(changed.titles.count()):
-    body += "- " + changed.titles[i].strip() + " (" + changed.hashes[i] + ")\n"
+if changed.titles.count() is not 0:
+    if body == "":
+        body += "Changed:\n"
+    else:
+        body += "\nFixed:\n"
+    for i in range(changed.titles.count()):
+        body += "- " + changed.titles[i].strip() + " (" + changed.hashes[i] + ")\n"
 
-body += "\nUpdated:\n"
-for i in range(updated.titles.count()):
-    body += "- " + updated.titles[i].strip() + " (" + updated.hashes[i] + ")\n"
+if fixed.titles.count() is not 0:
+    if body == "":
+        body += "Fixed:\n"
+    else:
+        body += "\nFixed:\n"
+    for i in range(fixed.titles.count()):
+        body += "- " + fixed.titles[i].strip() + " (" + fixed.hashes[i] + ")\n"
+
+if updated.titles.count() is not 0:
+    if body == "":
+        body += "Updated:\n"
+    else:
+        body += "\nUpdated:\n"
+    for i in range(updated.titles.count()):
+        body += "- " + updated.titles[i].strip() + " (" + updated.hashes[i] + ")\n"
 
 pull = repo.create_pull(title, body, "prod", "dev")
 
