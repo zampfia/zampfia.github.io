@@ -1,4 +1,4 @@
-import * as Database from "@/external/db";
+import * as Database from "@/functions/db";
 import { ContactFormResponse } from "@/components/types/contactFormResponse";
 import { log } from "console";
 import { NextResponse } from "next/server";
