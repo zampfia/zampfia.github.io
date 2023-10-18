@@ -25,14 +25,6 @@ export async function POST(request: Request) {
             status: 200,
         });
     } else if (result === false) {
-        log(
-            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n" +
-                res +
-                "\n" +
-                result +
-                "\n" +
-                response,
-        );
         return new NextResponse("Errored. Check logs", {
             status: 500,
         });
