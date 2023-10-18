@@ -48,3 +48,15 @@ export async function getFromDB<T>(
         await client.close();
     }
 }
+
+export async function getDocCountFromDB(db: string, collect: string) {
+    const client = new MongoClient(uri);
+    try {
+        const database = client.db(db);
+        const collection = database.collection(collect);
+        const result = await collection.countDocuments();
+        return result;
+    } finally {
+        await client.close();
+    }
+}
