@@ -16,7 +16,7 @@ export async function POST(request: Request) {
         country: res.country,
     };
     const result = await Database.insertToDB<ZampaFormResponse>(
-        "Zampfia",
+        process.env.NODE_ENV == "production" ? "Zampfia" : "ZampfiaDev",
         "ZampaVinti",
         response,
     );

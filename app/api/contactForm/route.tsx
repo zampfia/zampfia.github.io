@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         message: res.message,
     };
     const result = await Database.insertToDB<ContactFormResponse>(
-        "Zampfia",
+        process.env.NODE_ENV == "production" ? "Zampfia" : "ZampfiaDev",
         "Contacting",
         response,
     );
