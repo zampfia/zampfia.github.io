@@ -25,7 +25,7 @@
     "devDependencies": {
         "@types/node": "^20.8.6",
         "@types/react": "^18.2.28",
-        "daisyui": "^3.9.2",
+        "daisyui": "^3.9.3",
         "eslint-config-prettier": "^9.0.0",
         "husky": "^8.0.3",
         "lint-staged": "^15.0.1",
