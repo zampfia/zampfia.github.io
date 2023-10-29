@@ -1,21 +1,34 @@
 import os
-import CommitList
-from github import Github, Commit
+from commitList import CommitList
+from github import Github, Commit, PaginatedList
+import myPyGithub
 
 UsableCommitList = list[Commit.Commit]
 
 g = Github(os.environ["GITHUB_TOKEN"])
 repo = g.get_repo("zampfia/zampfia.github.io")
 
-all_commits = repo.get_commits()
 dev_commits: UsableCommitList = []
+found = False
+page = 1
 
-for commit in all_commits:
-    dev_commits.append(commit)
-    if "start dev->prod" in commit.commit.message:
-        break
+
+def get_actual_commits(commits: PaginatedList.PaginatedList):
+    for _commit in commits:
+        dev_commits.append(_commit)
+        if "start dev->prod" in _commit.commit.message:
+            return True
+    return False
+
+
+while not found:
+    all_commits = myPyGithub.get_commits_with_page(repo, page = page)
+    found = get_actual_commits(all_commits)
+    page += 1
 
 head_commit_message = str(dev_commits[0].commit.message).splitlines()
+
+title = "Stuff"
 for line in head_commit_message:
     if line.startswith("Title: "):
         title = "[dev->prod] " + line[7:]
@@ -46,58 +59,59 @@ for commit in dev_commits:
             if "and" in commit.commit.message:
                 s = commit.commit.message.split("\n")[0].split("Bump ")[1]
                 updated.titles.append(s)
-            else: 
+            else:
                 s = commit.commit.message.split("\n")[0].split("Bump ")[1]
                 a = s.split(" from ")[0]
                 b = s.split(" from ")[1].split(" to ")[0]
                 c = s.split(" to ")[1]
-                updated.titles.append(a + " [" + b + "->" + c +"]")
+                updated.titles.append(a + " [" + b + "->" + c + "]")
         else:
             s = commit.commit.message.split(": bump ")[1].split("\n")[0]
             a = s.split(" from ")[0]
             b = s.split(" from ")[1].split(" to ")[0]
             c = s.split(" to ")[1]
-            updated.titles.append(a + " [" + b + "->" + c +"]")
+            updated.titles.append(a + " [" + b + "->" + c + "]")
         updated.hashes.append(commit.sha)
 
 body = ""
 
-if added.titles.count() is not 0:
+if len(added.titles) != 0:
     body += "Added:\n"
-    for i in range(added.titles.count()):
+    for i in range(len(added.titles)):
         body += "- " + added.titles[i].strip() + " (" + added.hashes[i] + ")\n"
 
-if removed.titles.count() is not 0:
+if len(removed.titles) != 0:
     if body == "":
         body += "Removed:\n"
     else:
         body += "\nRemoved:\n"
-    for i in range(removed.titles.count()):
+    for i in range(len(removed.titles)):
         body += "- " + removed.titles[i].strip() + " (" + removed.hashes[i] + ")\n"
 
-if changed.titles.count() is not 0:
+if len(changed.titles) != 0:
     if body == "":
         body += "Changed:\n"
     else:
-        body += "\nFixed:\n"
-    for i in range(changed.titles.count()):
+        body += "\nChanged:\n"
+    for i in range(len(changed.titles)):
         body += "- " + changed.titles[i].strip() + " (" + changed.hashes[i] + ")\n"
 
-if fixed.titles.count() is not 0:
+if len(fixed.titles) != 0:
     if body == "":
         body += "Fixed:\n"
     else:
         body += "\nFixed:\n"
-    for i in range(fixed.titles.count()):
+    for i in range(len(fixed.titles)):
         body += "- " + fixed.titles[i].strip() + " (" + fixed.hashes[i] + ")\n"
 
-if updated.titles.count() is not 0:
+if len(updated.titles) != 0:
     if body == "":
         body += "Updated:\n"
     else:
         body += "\nUpdated:\n"
-    for i in range(updated.titles.count()):
+    for i in range(len(updated.titles)):
         body += "- " + updated.titles[i].strip() + " (" + updated.hashes[i] + ")\n"
+
 
 pull = repo.create_pull(title, body, "prod", "dev")
 
