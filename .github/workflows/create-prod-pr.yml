@@ -23,6 +23,6 @@ jobs:
 
             - name: Assign tag to inactive issues/PRs
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.USABLE_GITHUB_TOKEN }}
               run: |
                   python ./.github/suppl/dev-prod/create_prod_pr.py
