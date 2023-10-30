@@ -9,6 +9,9 @@ export const TextField = ({
     classes = "",
     input_classes = "",
     required = false,
+    password = false,
+    min = 0,
+    max = Infinity,
 }) => {
     return (
         <div
@@ -24,12 +27,14 @@ export const TextField = ({
                 </span>
             </label>
             <input
-                type="text"
+                type={password ? "password" : "text"}
                 placeholder={placeholder}
                 className={`field input input-bordered w-full max-w-xs pl-2  ${input_classes}`}
                 id={id}
                 name={id}
                 required={required}
+                minLength={min}
+                maxLength={max}
             />
         </div>
     );
@@ -234,6 +239,39 @@ export const ZampacyCheckField = ({ id, classes = "", required = false }) => {
                 </Link>{" "}
                 e di esprimere il mio consenso.
             </label>
+        </div>
+    );
+};
+
+export const FileField = ({
+    label,
+    id,
+    classes = "",
+    input_classes = "",
+    required = false,
+    onChange = null,
+}) => {
+    return (
+        <div
+            className={`form-control w-full max-w-xs xs:max-w-[9rem] ${classes}`}
+        >
+            <label className="label">
+                <span
+                    className={`label-text-2 label-text text-base xs:text-sm ${
+                        required ? "asterisk" : ""
+                    }`}
+                >
+                    {label}
+                </span>
+            </label>
+            <input
+                type="file"
+                className={`field file-input input file-input-accent input-bordered w-full max-w-xs rounded pl-2 ${input_classes}`}
+                id={id}
+                name={id}
+                required={required}
+                onChange={onChange}
+            />
         </div>
     );
 };

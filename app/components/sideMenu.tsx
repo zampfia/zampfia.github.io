@@ -23,6 +23,9 @@ const SideMenu = ({ isOpen, onClose }) => {
                     <li className="pl-5">
                         <Link href="/about">Chi siamo</Link>
                     </li>
+                    <li className="pl-5">
+                        <Link href="/charity">Dona a Zampa</Link>
+                    </li>
                 </ul>
             </div>
         </div>
