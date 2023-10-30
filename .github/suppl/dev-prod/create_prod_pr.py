@@ -113,6 +113,6 @@ if len(updated.titles) != 0:
         body += "- " + updated.titles[i].strip() + " (" + updated.hashes[i] + ")\n"
 
 
-pull = repo.create_pull(title, body, base = "prod", head = "dev")
+pull = repo.create_pull(title = title, body = body, base = "prod", head = "dev")
 
 pull.add_to_labels("dev->prod")
