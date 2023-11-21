@@ -55,7 +55,10 @@ for commit in dev_commits:
         fixed.titles.append(commit.commit.message.split("\n")[0])
         fixed.hashes.append(commit.sha)
     elif "[update]" in commit.commit.message:
-        s = commit.commit.message.split(": bump ")[1].split("\n")[0]
+        try:
+            s = commit.commit.message.split(": bump ")[1].split("\n")[0]
+        except:
+            s = commit.commit.message.split(" bump ")[1].split("\n")[0]
         a = s.split(" from ")[0]
         b = s.split(" from ")[1].split(" to ")[0]
         c = s.split(" to ")[1]
