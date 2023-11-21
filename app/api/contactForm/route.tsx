@@ -1,28 +1,24 @@
-import * as Database from "@/functions/db";
-import { ContactFormResponse } from "@/components/types/contactFormResponse";
-import { log } from "console";
+import prisma from "@/functions/db";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
     const res = await request.json();
-    const response: ContactFormResponse = {
-        name: res.name,
-        surname: res.surname,
-        email: res.email,
-        country: res.country,
-        subject: res.subject,
-        message: res.message,
-    };
-    const result = await Database.insertToDB<ContactFormResponse>(
-        process.env.NODE_ENV == "production" ? "Zampfia" : "ZampfiaDev",
-        "Contacting",
-        response,
-    );
-    if (result === true) {
+    const result = await prisma.contacting.create({
+        data: {
+            name: res.name,
+            surname: res.surname,
+            email: res.email,
+            country: res.country,
+            subject: res.subject,
+            message: res.message,
+            time: new Date().toUTCString(),
+        },
+    });
+    if (result != null) {
         return new NextResponse("Received by Database", {
             status: 200,
         });
-    } else if (result === false) {
+    } else if (result === null) {
         return new NextResponse("Errored. Check logs", {
             status: 500,
         });

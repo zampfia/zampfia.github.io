@@ -1,13 +1,16 @@
 "use client";
 
+import RegisterForm from "@/components/forms/walletAuth/registerForm";
 import { useCookies } from "next-client-cookies";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function WalletPage() {
+const RegisterPage = () => {
     const cookies = useCookies();
     if (cookies.get("token") === undefined) {
-        useRouter().push("/auth?redirect=/wallet&name=Magico Portafoglio");
+        useRouter().push(
+            "/auth?redirect=/wallet/auth/register&name=Magico Portafoglio",
+        );
     }
     useEffect(() => {
         getUser();
@@ -39,10 +42,11 @@ export default function WalletPage() {
             );
         }
     };
-
     return (
         <div className="margin">
-            <h1>Add money</h1>
+            <RegisterForm />
         </div>
     );
-}
+};
+
+export default RegisterPage;

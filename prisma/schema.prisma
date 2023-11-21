@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Contacting {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  country String
+  email   String
+  message String
+  name    String
+  subject String
+  surname String
+  time    String
+}
+
+model User {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  email    String   @unique
+  password String
+  perms    String[]
+  token    String?  @unique
+  username String   @unique
+}
+
+model WalletAuth {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  address        String
+  identification String
+  message        String
+  password       String
+  rsaPrivateKey  String
+  rsaPublicKey   String
+  salt           String
+}
+
+model WalletInfo {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  address String
+  email   String
+  id_     Int    @map("id")
+  name    String
+  surname String
+}
+
+model ZampaVinti {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  address       String
+  birthday      String
+  city          String
+  country       String
+  email         String
+  name          String
+  street_number String
+  surname       String
+}

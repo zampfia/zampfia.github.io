@@ -5,4 +5,5 @@ export type ContactFormResponse = {
     country: string;
     subject: string;
     message: string;
+    time: string;
 };

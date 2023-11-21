@@ -19,6 +19,7 @@ const ContactForm = ({ close }) => {
             country: event.target.country.value,
             subject: event.target.subject.value,
             message: event.target.message.value,
+            time: new Date().toUTCString(),
         };
 
         await fetch("/api/contactForm", {

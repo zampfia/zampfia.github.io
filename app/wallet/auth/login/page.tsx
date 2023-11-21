@@ -1,13 +1,16 @@
 "use client";
 
+import LoginForm from "@/components/forms/walletAuth/loginForm";
 import { useCookies } from "next-client-cookies";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function WalletPage() {
+const LoginPage = () => {
     const cookies = useCookies();
     if (cookies.get("token") === undefined) {
-        useRouter().push("/auth?redirect=/wallet&name=Magico Portafoglio");
+        useRouter().push(
+            "/auth?redirect=/wallet/auth/login&name=Magico Portafoglio",
+        );
     }
     useEffect(() => {
         getUser();
@@ -42,7 +45,9 @@ export default function WalletPage() {
 
     return (
         <div className="margin">
-            <h1>Add money</h1>
+            <LoginForm />
         </div>
     );
-}
+};
+
+export default LoginPage;
