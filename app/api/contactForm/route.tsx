@@ -11,6 +11,7 @@ export async function POST(request: Request) {
             country: res.country,
             subject: res.subject,
             message: res.message,
+            time: new Date().toUTCString(),
         },
     });
     if (result != null) {
