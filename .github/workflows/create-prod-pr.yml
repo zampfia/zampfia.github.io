@@ -23,6 +23,6 @@ jobs:
 
             - name: Create dev->prod pull request
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.USABLE_GITHUB_TOKEN }}
               run: |
                   python ./.github/suppl/dev-prod/create_prod_pr.py
