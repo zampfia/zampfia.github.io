@@ -21,7 +21,7 @@ jobs:
             - name: Install dependencies
               run: pip install PyGithub
 
-            - name: Assign tag to inactive issues/PRs
+            - name: Create dev->prod pull request
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
