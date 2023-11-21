@@ -15,6 +15,7 @@ model Contacting {
   name    String
   subject String
   surname String
+  time    String
 }
 
 model User {
