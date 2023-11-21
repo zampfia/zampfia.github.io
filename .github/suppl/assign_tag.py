@@ -16,17 +16,15 @@ open_pulls = repo.get_pulls(state='open')
 inactive_threshold = datetime.now() - timedelta(weeks=2)
 
 # Iterate through each open issue and check the last comment timestamp
-for issue in open_issues:
-    if issue == None:
-        break
-    last_comment = issue.get_comments().reversed[0].created_at
-    if last_comment <= inactive_threshold:
-        issue.add_to_labels('old')
+if open_issues.totalCount != 0:
+    for issue in open_issues:
+        last_comment = issue.get_comments().reversed[0].created_at
+        if last_comment <= inactive_threshold:
+            issue.add_to_labels('old')
 
 # Iterate through each open pull request and check the last comment timestamp
-for pull in open_pulls:
-    if pull == None:
-        break
-    last_comment = pull.get_comments().reversed[0].created_at
-    if last_comment <= inactive_threshold:
-        pull.add_to_labels('old')
+if open_pulls != 0:
+    for pull in open_pulls:
+        last_comment = pull.get_comments().reversed[0].created_at
+        if last_comment <= inactive_threshold:
+            pull.add_to_labels('old')
