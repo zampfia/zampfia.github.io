@@ -23,7 +23,7 @@ model User {
   email    String   @unique
   password String
   perms    String[]
-  token    String   @unique
+  token    String?  @unique
   username String   @unique
 }
 
