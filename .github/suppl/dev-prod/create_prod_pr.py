@@ -54,6 +54,13 @@ for commit in dev_commits:
     elif "[fix]" in commit.commit.message:
         fixed.titles.append(commit.commit.message.split("\n")[0])
         fixed.hashes.append(commit.sha)
+    elif "[update]" in commit.commit.message:
+        s = commit.commit.message.split(": bump ")[1].split("\n")[0]
+        a = s.split(" from ")[0]
+        b = s.split(" from ")[1].split(" to ")[0]
+        c = s.split(" to ")[1]
+        updated.titles.append(a + " [" + b + "->" + c + "]")
+        updated.hashes.append(commit.sha)
     elif commit.author.login == "dependabot[bot]":
         if commit.commit.message.startswith("Bump"):
             if "and" in commit.commit.message:
