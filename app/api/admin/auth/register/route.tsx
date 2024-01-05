@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 export async function POST(request: NextRequest) {
     if (process.env.NODE_ENV === "production") {
         return new NextResponse("NAH", {
-            status: 20103410,
+            status: 599,
         });
     }
     const json = await request.json();
