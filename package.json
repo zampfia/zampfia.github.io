@@ -30,7 +30,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.10.6",
-        "@types/react": "^18.2.37",
+        "@types/react": "^18.2.48",
         "daisyui": "^4.6.0",
         "eslint-config-prettier": "^9.1.0",
         "husky": "^8.0.3",
